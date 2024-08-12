@@ -1,8 +1,8 @@
 const Pool = require('pg').Pool;
 const pool = new Pool({
     user: "astrolog", 
-    password: "astRlGGpsswrd",
-    host: "185.179.189.185",
+    password: "mypass",
+    host: "5.35.82.254",
     port: "5432",
     database: "astrologydb",
 })
