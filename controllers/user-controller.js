@@ -9,6 +9,10 @@ class UserController{
         const profiles = await db.query('SELECT * FROM profiles')
         res.json(profiles.rows)
     }
+    async getMessages(req,res) {
+        const profiles = await db.query('SELECT * FROM messages')
+        res.json(profiles.rows)
+    }
     async updateDone(req,res) {
         console.log(req.body.done, req.body.id);
         
