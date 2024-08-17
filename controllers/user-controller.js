@@ -29,7 +29,7 @@ WHERE id = ${req.body.id}`)
         try {
             const result = await db.query(
                 `INSERT INTO messages (date_message, message, type, unique_id, user_id)
-                VALUES (NOW(), $1, 'bot', nextval('messages_unique_id_seq'), $2)
+                VALUES (TO_CHAR(NOW(), 'YYYY-MM-DD'), $1, 'bot', nextval('messages_unique_id_seq'), $2)
                 RETURNING *;`,
                 [message, userId]
             );
